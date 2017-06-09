@@ -15,8 +15,10 @@ namespace qwerTranslator
 			int number;
 			while (true){
 				Console.WriteLine("Press E for encoder, press D for decoder, press Q to quit, press H for help.");
+				Console.Write(">>");
 				char[] choices = {'E', 'e', 'D', 'd', 'Q', 'q', 'H', 'h'};
 				char choice = Console.ReadKey().KeyChar;
+				Console.WriteLine();
 				if(!choices.Contains(choice)) Console.WriteLine("{0} is not a valid choice.", choice);
 				if(choice == 'E' || choice == 'e'){
 					Console.WriteLine("Type you want to encode");
