@@ -43,12 +43,10 @@ namespace qwerTranslator
 					int length = charactersToBeDecoded.Length;
 					int i = 0;
 					char[] decodedCharacters = new char[length];
-					foreach(char cTBE in charactersToBeDecoded){
-						if (cTBE == ' '){
-							decodedCharacters[i] = cTBE;
-						}
-						if (cTBE != ' '){
-						int results = Array.IndexOf(qwertyKeyboardForDecoding, cTBE);
+					foreach(char cTBD in charactersToBeDecoded){
+						if (cTBD == ' ') decodedCharacters[i] = cTBD;
+						if (cTBD != ' '){
+						int results = Array.IndexOf(qwertyKeyboardForDecoding, cTBD);
 						results++;
 						decodedCharacters[i] = qwertyKeyboardForDecoding[results];
 						}
